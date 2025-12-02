@@ -1,4 +1,5 @@
-password = 0
+password1 = 0
+password2 = 0
 dial = 50
 
 for line in open("input/day1.txt"):
@@ -8,6 +9,10 @@ for line in open("input/day1.txt"):
     for i in range(steps):
         dial = (dial + dir) % 100
         if dial == 0:
-            password += 1
+            password2 += 1
 
-print(f"Password is {password}")
+    if dial == 0:
+        password1 += 1
+
+print(password1)
+print(password2)
